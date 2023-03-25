@@ -6,9 +6,11 @@ package TrackBitMain;
  */
 public class Producto {
     private String nombre;
+    private String precio;
 
-    public Producto(String nombre) {
+    public Producto(String nombre, String precio) {
         this.nombre = nombre;
+        this.precio = precio;
     }
 
     public String getNombre() {
@@ -17,6 +19,14 @@ public class Producto {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(String precio) {
+        this.precio = precio;
     }
     
 }

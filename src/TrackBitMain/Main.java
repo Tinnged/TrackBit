@@ -18,10 +18,10 @@ public class Main {
         InicioSesionMenuPrincipal.getInstancia().setVisible(true);
     }
     
-    public static void agregarProdcuto(String nombre){
+    public static void agregarProdcuto(String nombre, String precio){
         nombre = nombre.trim();
         if(!nombre.equals("")){
-            Producto producto = new Producto(nombre);
+            Producto producto = new Producto(nombre, precio);
             listaDeProductos.add(producto);
             System.out.println("Se agrego el producto "+producto.getNombre());
         } else{

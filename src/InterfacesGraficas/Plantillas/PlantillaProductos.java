@@ -24,6 +24,10 @@ public class PlantillaProductos extends javax.swing.JPanel {
     public void cambiarNombre(String nombre){
         this.nombreItem.setText(nombre);
     }
+    
+    public void cambiarPrecio(String precio){
+        this.precioItem.setText(precio);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -32,6 +36,8 @@ public class PlantillaProductos extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         nombreItem = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        precioItem = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(400, 100));
@@ -60,6 +66,14 @@ public class PlantillaProductos extends javax.swing.JPanel {
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        precioItem.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        precioItem.setForeground(new java.awt.Color(0, 0, 0));
+        precioItem.setText("Precio del producto");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Precio:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -67,10 +81,15 @@ public class PlantillaProductos extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(nombreItem)
-                        .addGap(0, 147, Short.MAX_VALUE))
-                    .addComponent(jSeparator1))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nombreItem)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(precioItem)))
+                        .addGap(0, 147, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -80,7 +99,11 @@ public class PlantillaProductos extends javax.swing.JPanel {
                 .addComponent(nombreItem)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(precioItem))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -109,8 +132,10 @@ public class PlantillaProductos extends javax.swing.JPanel {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel nombreItem;
+    private javax.swing.JLabel precioItem;
     // End of variables declaration//GEN-END:variables
 }

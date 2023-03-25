@@ -190,7 +190,7 @@ public class MenuClientePrincipal extends javax.swing.JFrame {
             Producto productoActual = Main.listaDeProductos.get(i);
             JPanel plantillaProducto = plantilla.devolverComponente();
             plantilla.cambiarNombre(productoActual.getNombre());
-            
+            plantilla.cambiarPrecio(productoActual.getPrecio());
             plantillaProducto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 abrirPaginaProducto(productoActual);

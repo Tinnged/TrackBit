@@ -73,13 +73,18 @@ public class MenuClienteInicio extends javax.swing.JPanel {
         IngresarBoton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         IngresarBoton.setForeground(new java.awt.Color(18, 148, 223));
         IngresarBoton.setText("Ingresar");
-        IngresarBoton.setBorder(null);
-        IngresarBoton.setBorderPainted(false);
+        IngresarBoton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         IngresarBoton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         IngresarBoton.setFocusable(false);
         IngresarBoton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 IngresarBotonMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                IngresarBotonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                IngresarBotonMouseExited(evt);
             }
         });
         IngresarBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -111,12 +116,20 @@ public class MenuClienteInicio extends javax.swing.JPanel {
         jPanel1.add(passwordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 400, 30));
 
         RegistrarseBoton.setBackground(new java.awt.Color(18, 148, 223));
-        RegistrarseBoton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RegistrarseBoton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         RegistrarseBoton.setForeground(new java.awt.Color(255, 255, 255));
         RegistrarseBoton.setText("Registrarme");
         RegistrarseBoton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         RegistrarseBoton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         RegistrarseBoton.setFocusable(false);
+        RegistrarseBoton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RegistrarseBotonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                RegistrarseBotonMouseExited(evt);
+            }
+        });
         RegistrarseBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarseBotonActionPerformed(evt);
@@ -148,6 +161,26 @@ public class MenuClienteInicio extends javax.swing.JPanel {
         this.setVisible(false);
         InicioSesionMenuPrincipal.getInstancia().cambiarVentana("cliente_registro");
     }//GEN-LAST:event_RegistrarseBotonActionPerformed
+
+    private void RegistrarseBotonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarseBotonMouseEntered
+        RegistrarseBoton.setBackground(new java.awt.Color(255, 255, 255));
+        RegistrarseBoton.setForeground(new java.awt.Color(18, 148, 223));
+    }//GEN-LAST:event_RegistrarseBotonMouseEntered
+
+    private void RegistrarseBotonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarseBotonMouseExited
+        RegistrarseBoton.setForeground(new java.awt.Color(255, 255, 255));
+        RegistrarseBoton.setBackground(new java.awt.Color(18, 148, 223));
+    }//GEN-LAST:event_RegistrarseBotonMouseExited
+
+    private void IngresarBotonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBotonMouseEntered
+        IngresarBoton.setForeground(new java.awt.Color(255, 255, 255));
+        IngresarBoton.setBackground(new java.awt.Color(18, 148, 223));
+    }//GEN-LAST:event_IngresarBotonMouseEntered
+
+    private void IngresarBotonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBotonMouseExited
+        IngresarBoton.setBackground(new java.awt.Color(255, 255, 255));
+        IngresarBoton.setForeground(new java.awt.Color(18, 148, 223));
+    }//GEN-LAST:event_IngresarBotonMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

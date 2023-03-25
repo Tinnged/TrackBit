@@ -30,6 +30,8 @@ public class MenuVendedorAgregarProducto extends javax.swing.JFrame {
         BotonVolver = new javax.swing.JButton();
         Barra = new javax.swing.JPanel();
         Salir = new javax.swing.JButton();
+        labelPrecio = new javax.swing.JLabel();
+        precioTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(900, 600));
@@ -49,7 +51,7 @@ public class MenuVendedorAgregarProducto extends javax.swing.JFrame {
         Titulo.setText("Agregar Producto");
         bg.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 290, -1));
 
-        labelNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelNombre.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         labelNombre.setForeground(new java.awt.Color(255, 255, 255));
         labelNombre.setText("Nombre");
         bg.add(labelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
@@ -58,18 +60,19 @@ public class MenuVendedorAgregarProducto extends javax.swing.JFrame {
         nombreTextField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         nombreTextField.setForeground(new java.awt.Color(0, 0, 0));
         nombreTextField.setBorder(null);
-        bg.add(nombreTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 550, 40));
+        bg.add(nombreTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 550, 40));
 
         agregarBoton.setBackground(new java.awt.Color(255, 255, 255));
         agregarBoton.setForeground(new java.awt.Color(18, 148, 223));
         agregarBoton.setText("Agregar");
         agregarBoton.setBorder(null);
+        agregarBoton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         agregarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarBotonActionPerformed(evt);
             }
         });
-        bg.add(agregarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 440, 110, 50));
+        bg.add(agregarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 110, 40));
 
         BotonVolver.setBackground(new java.awt.Color(18, 148, 223));
         BotonVolver.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -136,6 +139,17 @@ public class MenuVendedorAgregarProducto extends javax.swing.JFrame {
 
         bg.add(Barra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 70));
 
+        labelPrecio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelPrecio.setForeground(new java.awt.Color(255, 255, 255));
+        labelPrecio.setText("Precio");
+        bg.add(labelPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
+
+        precioTextField.setBackground(new java.awt.Color(255, 255, 255));
+        precioTextField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        precioTextField.setForeground(new java.awt.Color(0, 0, 0));
+        precioTextField.setBorder(null);
+        bg.add(precioTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 290, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -152,10 +166,11 @@ public class MenuVendedorAgregarProducto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void agregarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBotonActionPerformed
-        if(nombreTextField.getText() != ""){
-            Main.agregarProdcuto(nombreTextField.getText());
+        if(nombreTextField.getText() != "" && precioTextField.getText() != ""){
+            Main.agregarProdcuto(nombreTextField.getText(), "$"+precioTextField.getText());
         }
         nombreTextField.setText("");
+        precioTextField.setText("");
     }//GEN-LAST:event_agregarBotonActionPerformed
 
     private void BotonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVolverActionPerformed
@@ -196,6 +211,8 @@ public class MenuVendedorAgregarProducto extends javax.swing.JFrame {
     private javax.swing.JButton agregarBoton;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel labelNombre;
+    private javax.swing.JLabel labelPrecio;
     private javax.swing.JTextField nombreTextField;
+    private javax.swing.JTextField precioTextField;
     // End of variables declaration//GEN-END:variables
 }

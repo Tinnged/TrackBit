@@ -100,7 +100,7 @@ public class MenuVendedorPrincipal extends javax.swing.JFrame {
         bg.add(cabezera, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 660, 80));
 
         AgregarBoton.setBackground(new java.awt.Color(18, 148, 223));
-        AgregarBoton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        AgregarBoton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         AgregarBoton.setForeground(new java.awt.Color(255, 255, 255));
         AgregarBoton.setText("Agregar Producto");
         AgregarBoton.setBorder(null);
@@ -226,6 +226,7 @@ public class MenuVendedorPrincipal extends javax.swing.JFrame {
             Producto productoActual = Main.listaDeProductos.get(i);
             JPanel plantillaProducto = plantilla.devolverComponente();
             plantilla.cambiarNombre(productoActual.getNombre());
+            plantilla.cambiarPrecio(productoActual.getPrecio());
             
             panelDeProductos.add(plantillaProducto);
         }
